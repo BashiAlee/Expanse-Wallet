@@ -1,0 +1,58 @@
+@import "variables";
+
+@media only screen and (max-width: $br1200px)  {
+//==============================================participate page responsiveness/==============================================
+    .participate{
+        .content{
+            .saleDetails{
+                .inner{
+                    .saleDetailsH1{
+                        font-size:15.5px;
+                    }
+
+                    .left{
+                        padding-right: 15px;
+
+                        .unavailableToken{
+                            button{
+                                padding: 8.5px 5px;
+                            }
+                        }
+                    }
+
+                    .right{
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+//==============================================sent page responsiveness/==============================================
+    .sent{
+        .content{
+            .funds{
+                .contentInner{
+                    .sentDetails{
+                        .fundsInner{
+                            .left{
+                                .amountdetails{
+                                    .progressBar{
+                                        input[type=range] {
+                                            height: 12px;
+                                        }
+
+                                        input[type="range"]::-webkit-slider-thumb {
+                                        width: 15px;
+                                        height: 25px;
+                                    }
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

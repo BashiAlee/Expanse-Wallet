@@ -1,0 +1,36 @@
+@import "variables";
+
+@media only screen and (max-width: $br1400px)  {
+
+
+//==============================================dashboard page responsiveness/==============================================
+div.dashboard{
+    .content{
+        .accoundID {
+            pointer-events: visible !important;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+        
+        .userInfo{
+            .right{
+                grid-gap: 15px;
+                padding: 0px 15px;
+            }
+        }
+        .latestTransaction{
+            .transactionContent{
+                .row{
+                    label{
+                        font-size:15px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+    
+}

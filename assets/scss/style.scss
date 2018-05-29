@@ -1,0 +1,21 @@
+@import "reset";
+@import "animated";
+@import "fonts";
+
+//componets
+@import "menu";
+@import "loading";
+@import "dashboard";
+@import "contracts";
+@import "participate";
+@import "send";
+@import "fonts";
+
+
+
+body *{
+    font-family:MyriadProRegular;
+    .tabcontent {
+        display: none;
+    }
+}

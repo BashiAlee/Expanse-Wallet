@@ -1,0 +1,403 @@
+@import "variables";
+
+.send{
+
+    .content{
+        display: grid;
+        padding: 30px;
+
+        .funds{
+            background-color: #263a51;
+            padding: 27px 25px;
+            box-shadow: 0 2px 51px -10px #223247;
+
+            h1{
+                color:#ededed;
+                font-size:30px;
+                margin-bottom: 35px;
+            }
+
+            .contentInner{
+                display: grid;
+                grid-gap: 30px;
+                .sentDetails{
+                    margin-bottom: 30px;
+                    .fundTransfer{
+                        display: grid;
+                        grid-template-columns: 48% 48%;
+                        grid-gap:4%;
+                        margin-bottom: 32px;
+
+                        >div>label{
+                            color:#ededed;
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            display: block;
+                            text-transform: uppercase;
+                        }
+
+                        .from{
+
+                            .fundsFrom{
+                                .drop-down { 
+                                        position: relative;    
+                                        margin-top: 0;
+                                        background: #fff;
+                                        padding: 6px 20px;
+                                        
+                                        .selectbtn{
+                                            display: flex;
+                                            height: 43px;
+                                            cursor: pointer;
+
+                                            .btnspan{
+                                                flex:1;
+                                                color: #263a51;
+                                                display: flex;
+                                                align-items: center;
+                                                padding-left: 75px;
+                                                background-position: 0%, 50px;
+                                            }
+
+                                            .select-list-link{
+                                                display:flex;
+                                            }
+                                        }
+                                    
+                                        select {   
+                                            display: none;       
+                                        } 
+
+                                        .select-list {   
+                                            position: absolute;     
+                                            top: 0;      
+                                            left: 0;     
+                                            z-index: 1;    
+                                            margin-top: 60px;    
+                                            padding: 0;        
+                                            width: 100%; 
+                                            background-color: $white;  
+                                            
+                                            .clsAnchor{
+                                                span{
+                                                    background-position: 19px, 68px;
+                                                }
+                                            }
+                                            
+                                            li {   
+                                                display: none; 
+                                                border-bottom: 1px solid #263a51;  
+                                                
+                                                span {  
+                                                    display: inline-block;      
+                                                    min-height: 55px;              
+                                                    width: 100%;        
+                                                    padding: 0px 20px 0px 97px;     
+                                                    background-color: $white;  
+                                                    background-position: left 20px center;   
+                                                    background-repeat: no-repeat;       
+                                                    font-size: 18px;       
+                                                    text-align: left;       
+                                                    color: #263a51;        
+                                                    opacity: 0.7;      
+                                                    box-sizing: border-box;  
+                                                    display: flex;
+
+                                                    align-items: center; 
+                                                    
+                                                    &:hover,&:focus{
+                                                        opacity: 1;     
+                                                    }
+                                                }     
+                                            }    
+                                        }      
+                                }
+                            }
+                        }
+
+                        .to{
+                            .fundsTo{
+                                background: $white;
+                                padding: 6px 20px;
+                                display: grid;
+                                grid-template-columns: max-content auto;
+                                align-items: center;
+
+                                svg{
+                                    margin-right: 10px;
+                                }
+
+                                label{
+                                    color:#263a51;
+                                    font-size:18px;
+                                }
+                            }
+                        }
+                    }
+
+                    .fundsInner{
+                        display: grid;
+                        grid-template-columns: 48% 48%;
+                        grid-gap: 4%;
+
+                        .left{
+                            h1{
+                                color:#ededed;
+                                font-size:18px;
+                                margin-bottom: 10px; 
+                            }
+                            .amount{
+                                background-color: $white;
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 6px 20px;
+                                min-height: 43px;
+                                margin-bottom: 15px;
+
+                                label{
+                                    color:#263a51;
+                                    font-size:18px; 
+                                }
+
+                                .buttons{
+                                    button{
+                                        outline: none;
+                                        border: unset;
+                                        padding: 0px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            .checkbox{
+                                margin-bottom: 30px;
+                                .filter__value input[type='checkbox'] {
+                                    display: none;
+                                }
+                                
+                                .filter__mark {
+                                    width: 4px;
+                                    height: 4px;
+                                    border: 3px solid #ffffff;
+                                    position: relative;
+                                    margin-right: 10px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    background: #ffffff;
+                                    padding: 5px;
+                                    outline:none;
+
+                                    &:hover,&:focus{
+                                        cursor: pointer;
+                                    }
+                                }
+                                
+                                .filter__text {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    color:#ededed;
+                                    font-size:18px; 
+                                    line-height: 19px;
+                                }
+                                
+                                input[type='checkbox']:checked + .filter__mark::before {
+                                    content: "";
+                                    display: block;
+                                    position: absolute;
+                                    top: 1px;
+                                    right: 1px;
+                                    bottom: 1px;
+                                    left: 1px;
+                                    background: #817e7e;
+                                    border-radius: 2px;
+                                }
+                            }
+
+                            .amountdetails{
+
+                                label,h2{
+                                    color:#ededed;
+                                    font-size:18px;
+                                    display:block; 
+                                }
+
+                                .sendAmount{
+                                    margin-bottom:25px;
+                                }
+
+                                h2{
+                                    margin-bottom:10px;
+                                }
+
+                                #result{
+                                    margin-bottom:20px;
+                                }
+
+                                .progressBar{
+                                    input[type=range] {
+                                        display:block;
+                                        -webkit-appearance: none;
+                                        background:url(../img/bar.svg) no-repeat;
+                                        background-size: 100%;
+                                        width: 100%;
+                                        height: 18px;
+                                        outline:none;
+                                        -webkit-transition: .2s;
+                                        transition: opacity .2s;
+                                        cursor:pointer;
+                                        margin-bottom:20px;
+
+                                    }
+                                    
+                                    input[type="range"]::-webkit-slider-thumb {
+                                        -webkit-appearance: none;
+                                        background-color: #cb4d43;
+                                        width: 20px;
+                                        height: 32px;
+                                        border-radius:20px;
+                                        cursor:pointer;
+                                    }
+
+                                    .ranges{
+                                        display: grid;
+                                        grid-template-columns: auto auto;
+                                        justify-content: space-between;
+                                        margin-bottom:17px;
+
+
+                                        span{
+                                            color:#ededed;
+                                            font-size:16px;
+                                        }
+                                    }
+
+                                    p{
+                                        color:$white;
+                                        font-size:16px;
+                                        line-height: 24px;
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        .right{
+                            .currenyAmount{
+                                background-color: $white;
+                                margin-bottom: 30px;
+                                height: 177px;
+                                overflow-y: scroll;
+
+                                &::-webkit-scrollbar {
+                                    width: 11px;
+                                    background: #929ca8;
+                                }
+                                
+                                /* Handle */
+                                &::-webkit-scrollbar-thumb {
+                                    border-radius:10px;
+                                    background:$white url('../img/scrollThumb.svg') center center no-repeat;
+                                }
+
+                                .row{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding:8px 20px;
+
+                                    .currency{
+                                        display: grid;
+                                        grid-template-columns: auto auto;
+                                        align-items: center;
+                                        grid-gap: 10px;
+                                        svg{
+                                            height:25px;
+                                            width:25px;
+                                        }
+                                    }
+
+                                    label{
+                                        color:#263a51;
+                                        font-size:18px;
+                                    }
+                                }
+
+                                .active{
+                                    background-color: #e0e0e0;
+                                }
+                            }
+
+                            .data{
+                                label{
+                                    color: #ededed;
+                                    font-size: 18px;
+                                    margin-bottom: 10px;
+                                    display: block;
+                                    text-transform: uppercase;
+                                }
+                                textarea{
+                                    width: -webkit-fill-available;
+                                    margin: 0px 0px 22px 0px;
+                                    outline:none;
+                                    color: #263a51;
+                                    font-size: 16px;
+                                    line-height: 21px;
+                                    padding:5px;
+                                }
+
+                                p{
+                                    color: #ffffff;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .totalAmount{
+                    .amountheading{
+                        color:#ededed;
+                        font-size:18px;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                    .inner{
+                        display: grid;
+                        grid-template-columns: auto max-content;
+                        grid-gap: 3%;
+
+                        .coins{
+                            background: $white;
+                            padding:15px 18px;
+
+                            label{
+                                color:#333333;
+                                font-size:30px;
+                            }
+                        }
+
+                        .btn{
+                            display: flex;
+                            justify-content: flex-end;
+                            button{
+                                width:165px;
+                                background-color: #cb4d43;
+                                border:1px solid #cb4d43;
+                                padding: 18px;
+                                color:$white;
+                                font-size:18px;
+                                outline:none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

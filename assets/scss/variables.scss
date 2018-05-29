@@ -1,0 +1,33 @@
+//colors
+
+$white: #ffffff;
+$offWhite: #fafafa;
+$light-green:#204854;
+$red: #cb4d43;
+$light-blue: #cccccc;
+$lime-green: #0cbd34;
+
+
+
+//responsive
+
+$br1200px: 1200px;
+$br1400px: 1400px;
+
+//Animation
+
+$slow:all 900ms;
+$mid:all 600ms;
+$fast:all 300ms;
+// mixin
+@mixin transition($slow...) {
+    -moz-transition:    $slow, $mid, $fast;
+    -o-transition:      $slow, $mid, $fast;
+    -webkit-transition: $slow, $mid, $fast;
+    transition:         $slow, $mid, $fast;
+}
+
+
+
+
+
