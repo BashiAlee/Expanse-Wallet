@@ -4,6 +4,7 @@
   "description": "Expense Mist Wallet",
   "main": "main.js",
   "scripts": {
+    "test": "test"
     "start": "electron .",
     "dev": "electron-webpack dev",
     "build": "webpack",
